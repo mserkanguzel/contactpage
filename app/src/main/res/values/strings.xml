@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ContactForm</string>
+    <string name="name_hint_text">Name Surname</string>
+    <string name="email_hint_text">E-mail</string>
+    <string name="phone_hint_text">Phone</string>
+    <string name="message_hint_text">Your Message</string>
+    <string name="btn_submit">Submit</string>
+    <string name="avatar">Avatar</string>
+</resources>
