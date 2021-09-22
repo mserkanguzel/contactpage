@@ -4,5 +4,5 @@
 
 * Learning and developing to design Android material.
 * Developing myself in the Kotlin programming language.
-* For preparation for Hepsiburada Android bootcamp.
+* For preparation for Patika-Hepsiburada Android bootcamp.
 
