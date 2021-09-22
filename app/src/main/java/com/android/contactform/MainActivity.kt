@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     private val editTextEmail by lazy { findViewById<EditText>(R.id.editTextEmail) }
     private val editTextPhone by lazy { findViewById<EditText>(R.id.editTextPhone) }
     private val editTextMessage by lazy { findViewById<EditText>(R.id.editTextMessage) }
-    private val buttonSubmit by lazy {findViewById<View>(R.id.btn_submit)}
+    private val buttonSubmit by lazy { findViewById<View>(R.id.btn_submit) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,30 +23,29 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun submit() {
-        if(editTextName.text.isNullOrEmpty()) {
-            editTextName.error = "Bu alan gerekli"
-            editTextName.requestFocus()
-
-        }
-        else if (editTextEmail.text.isNullOrEmpty()) {
-            editTextEmail.error = "Bu alan gerekli"
-            editTextEmail.requestFocus()
-
-        }
-        else if (editTextPhone.text.isNullOrEmpty()) {
-            editTextPhone.error = "Bu alan gerekli"
-            editTextPhone.requestFocus()
-        }
-        else if (editTextMessage.text.isNullOrEmpty()) {
-            editTextMessage.error = "Bu alan gerekli"
-            editTextMessage.requestFocus()
-        }
-
-        else {
-            Log.i("MainActivity","Name Surname: ${editTextName.text}")
-            Log.i("MainActivity","Email: ${editTextEmail.text}")
-            Log.i("MainActivity","Phone: ${editTextPhone.text}")
-            Log.i("MainActivity","Message: ${editTextMessage.text}")
-        }
+     when {
+         editTextName.text.isNullOrEmpty() -> {
+             editTextName.error = "Bu alan gerekli"
+             editTextName.requestFocus()
+         }
+         editTextEmail.text.isNullOrEmpty() -> {
+             editTextEmail.error = "Bu alan gerekli"
+             editTextEmail.requestFocus()
+         }
+         editTextPhone.text.isNullOrEmpty() -> {
+             editTextPhone.error = "Bu alan gerekli"
+             editTextPhone.requestFocus()
+         }
+         editTextMessage.text.isNullOrEmpty() -> {
+             editTextMessage.error = "Bu alan gerekli"
+             editTextMessage.requestFocus()
+         }
+         else -> {
+             Log.i("MainActivity","Name Surname: ${editTextName.text}")
+             Log.i("MainActivity","Email: ${editTextEmail.text}")
+             Log.i("MainActivity","Phone: ${editTextPhone.text}")
+             Log.i("MainActivity","Message: ${editTextMessage.text}")
+         }
+     }
     }
 }
